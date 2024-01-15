@@ -37,7 +37,7 @@ jobs:
       - name: Docker build and push
         run: |
           #run commands to build and push docker images
-          docker build --build-arg TMDB_V3_API_KEY=2345dfbc8bfda566aef284cb8971dc61 -t Amazon. .
+          docker build --build-arg TMDB_V3_API_KEY=2345dfbc8bfda566aef284cb8971dc61 -t Amazon .
           docker tag Amazon pavan2115/Amazon:latest
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
           docker push pavan2115/Amazon:latest
